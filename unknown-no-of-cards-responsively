@@ -23,6 +23,7 @@ body{
 .container{
     display: grid;
     gap: 1rem;
+//implicit grid
     grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); 
 /* also another property called auto-fill is there ;try it  */
 }
