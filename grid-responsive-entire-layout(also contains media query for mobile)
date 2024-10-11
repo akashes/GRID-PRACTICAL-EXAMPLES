@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            text-align: center;
+            display: grid;
+            height: 100vh;
+            grid-template-columns: 1fr 4fr 1fr;
+            grid-template-rows: 100px auto 1fr auto  100px ;   
+            grid-template-areas:  'h h h' 
+                                   'l b r' 
+                                   'l m r' 
+                                   'l low r' 
+                                   'f f f';
+
+                              grid-gap:10px     
+        }
+      
+        .header{
+            grid-area: h;
+            background-color: yellow;
+        }
+        .banner{
+            grid-area:b ;
+            background-color: blue;
+        }
+        .left-article{
+            grid-area:l ;
+            background-color: green;
+        }
+        .right-article{
+            grid-area:r ;
+            background-color: red;
+        } 
+        .main{
+            grid-area:m ;
+            background-color: gray;
+        }
+        .low-article{
+            grid-area:low ;
+            background-color: aqua;
+        }
+        .footer{
+            grid-area: f;
+            background-color: black;
+            color: white;
+        }
+        @media (max-width:678px){
+            .container{
+                grid-template-rows: 50px 50px 50px 1fr 50px 50px 50px;
+                grid-template-columns: 1fr;
+                grid-template-areas: 'h' 
+                                    'b' 
+                                    'l' 
+                                    'm' 
+                                    'r' 
+                                    'low' 
+                                    'f' 
+           
+            }  
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            header
+
+        </div>
+        <div class="banner">
+            banner
+        </div>
+        <div class="left-article">
+            left
+        </div>
+        <div class="right-article">
+            right
+        </div>
+        <div class="main">
+            main
+        </div>
+        <div class="low-article">
+            low
+        </div>
+        <div class="footer">
+            footer
+        </div>
+
+    </div>
+    
+</body>
+</html>
